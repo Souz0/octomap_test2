@@ -21,6 +21,19 @@ def generate_launch_description():
             ],
             arguments=['--ros-args', '--log-level', LaunchConfiguration('log_level')]
         ),
+    	Node(
+    		package='tf2_ros',
+    		executable='static_transform_publisher',
+    		name='map_to_odom',
+    		arguments=[
+        		'0', '0', '0',
+        		'0', '0', '0', '1',
+        		'map',
+        		'odom'
+    		],
+    		parameters=[{'use_sim_time': True}],
+    		output='screen'
+    	),
         Node(
             package='tf2_ros',
             executable='static_transform_publisher',
