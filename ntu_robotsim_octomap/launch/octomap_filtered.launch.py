@@ -10,7 +10,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument('input_cloud_topic', default_value='/rgbd_camera/points'),
         DeclareLaunchArgument('resolution', default_value='0.10'),
-        DeclareLaunchArgument('frame_id', default_value='odom'),
+        DeclareLaunchArgument('frame_id', default_value='map'),
         DeclareLaunchArgument('base_frame_id', default_value='base_link'),
         DeclareLaunchArgument('height_map', default_value='True'),
         DeclareLaunchArgument('colored_map', default_value='True'),
